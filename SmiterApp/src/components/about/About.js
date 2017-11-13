@@ -5,8 +5,8 @@ import Moment from 'react-moment';
 import EventEmitter from "react-native-md5";
 import md5 from "react-native-md5";
 
-const devID = 1987;
-const authKey = "F3F77EE5FCDA4169B510AC9C656A";
+const devID = 0000;
+const authKey = "xxxx";
 
 Object.defineProperty(Date.prototype, 'YYYYMMDDHHMMSS', {
     value: function() {
@@ -51,7 +51,7 @@ class About extends React.Component {
        data: ''
     }
     componentDidMount = () => {
-      var req = 'http://api.smitegame.com/smiteapi.svc/createsessionJson/'+devID+'/'+createSignature()+'/'+getTime()
+      var req = 'http://api.smitegame.com/smiteapi.svc/createsession/Json/'+devID+'/'+createSignature()+'/'+getTime()
       //var req = 'http://api.smitegame.com/smiteapi.svc/pingJson'
        fetch(req
 , {
